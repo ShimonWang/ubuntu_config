@@ -1,0 +1,20 @@
+[user]
+	name = Shimon Wang
+	email = 3386260592@qq.com
+[credential]
+	helper = store
+[http]
+	proxy = http://127.0.0.1:7897
+	postBuffer = 524288000
+	maxRequestBuffer = 100M
+[https]
+	proxy = https://127.0.0.1:7897
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	autocrlf = input
